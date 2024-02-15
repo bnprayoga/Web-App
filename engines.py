@@ -2,51 +2,6 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-from labellines import labelLines
-
-
-def plot_BMI(HEIGHT_START, HEIGHT_END, WEIGHT_START, WEIGHT_END, height, weight, my_color_map):
-    X = np.linspace(HEIGHT_START, HEIGHT_END, HEIGHT_END-HEIGHT_START)
-    y_obeseIII = create_line(X, 40)
-    y_obeseII = create_line(X, 35)
-    y_obeseI = create_line(X, 30)
-    y_overweight = create_line(X, 25)
-    y_normal = create_line(X, 18.5)
-    y_underweight = create_line(X, 16.5)
-
-    BMI_plot, ax = plt.subplots(1,1, figsize=(10, 8))
-
-    #fill value
-    ax.fill_between(X, y_obeseIII, WEIGHT_END, color = my_color_map["obeseIII"])
-    ax.fill_between(X, y_obeseII, y_obeseIII, color = my_color_map["obeseII"])
-    ax.fill_between(X, y_obeseI, y_obeseII, color = my_color_map["obeseI"])
-    ax.fill_between(X, y_overweight, y_obeseI, color = my_color_map["overweight"])
-    ax.fill_between(X, y_normal, y_overweight, color = my_color_map["normal"])
-    ax.fill_between(X, y_underweight, y_normal, color = my_color_map["underweight"])
-    ax.fill_between(X, WEIGHT_START, y_underweight, color = my_color_map["ex_underweight"])
-
-    #plot the line and labellines
-    ax.plot(X, y_obeseIII, color = 'k', lw = 1, label="BMI "+str(40))
-    ax.plot(X, y_obeseII, color = 'k', lw = 1, label="BMI "+str(35))
-    ax.plot(X, y_obeseI, color = 'k', lw = 1, label="BMI "+str(30))
-    ax.plot(X, y_overweight, color = 'k', lw = 1, label="BMI "+str(25))
-    ax.plot(X, y_normal, color = 'k', lw = 1, label="BMI "+str(18.5))
-    ax.plot(X, y_underweight, color = 'k', lw = 1, label="BMI "+str(16.5))
-    xvals = [235, 220, 205, 190, 170, 150]
-    lines = plt.gca().get_lines()
-    labelLines(lines, align=True, xvals=xvals)
-
-    #plot poin of resulted BMI
-    ax.scatter(height, weight, marker='+', s=100, color='k')
-    ax.scatter(height, weight, marker='o', s=1000, facecolors='none', edgecolors='k')
-
-    #set max X and Y on the chart
-    ax.set_xlim(HEIGHT_START, HEIGHT_END)
-    ax.set_ylim(WEIGHT_START, WEIGHT_END)
-    ax.set_xlabel("height (cm)")
-    ax.set_ylabel("weight (kg)")
-    
-    return st.pyplot(BMI_plot)
 
 def plot_BMI_bar(HEIGHT_START, HEIGHT_END, WEIGHT_START, WEIGHT_END, height, weight, my_color_map):
     user_weight_status = [int(i*(height/100)**2) for i in [16.5, 18.5, 25, 30, 35, 40, 2*weight/(height/100)**2]]
