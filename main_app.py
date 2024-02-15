@@ -1,10 +1,8 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 import engines, about
 import numpy as np
 import matplotlib as mp
 import matplotlib.pyplot as plt
-from labellines import labelLines
 
 #setting parameter
 HEIGHT_START = 120
