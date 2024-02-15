@@ -47,7 +47,7 @@ class Content():
         st.header("What is BMI?")
         st.image("images/BMI.jpg", use_column_width = "always")
         st.markdown('<div style="text-align: justify;">{}</div>'.format(text_about_BMI), unsafe_allow_html=True)
-        st.latex(type(r"""BMI = \frac{weight \left( kg \right)} {height \left( m^2 \right)}"""))
+        st.latex(r"""BMI = \frac{weight \left( kg \right)} {height \left( m^2 \right)}""")
         st.markdown('<h5 style="text-align: center;">{}</h5>'.format("BMI Table"), unsafe_allow_html=True)
         st.dataframe(BMI_table, use_container_width=True, hide_index=True)
         st.markdown('---')
