@@ -30,14 +30,14 @@ def plot_BMI_bar(HEIGHT_START, HEIGHT_END, WEIGHT_START, WEIGHT_END, height, wei
     return st.write(plot)
 
 def show_weight_from_ideal(BMI, weight, height):
-    upb_val = weight-24*(height/100)**2
-    lwb_val = weight-19.5*(height/100)**2
+    upb_val = weight-25*(height/100)**2
+    lwb_val = weight-18.5*(height/100)**2
     if BMI > 25:
         st.success("##### Lose {:.2f} to {:.2f} kg to get Ideal Weight!!!".format(upb_val,lwb_val))
     elif BMI < 18.5:
         st.success("##### Gain {:.2f} to {:.2f} kg to get Ideal Weight!!!".format(-lwb_val, -upb_val))
     else:
-        st.success("##### Congratulation, your ideal weight is beetween {:.2f} and {:.2f} kg".format(lwb_val, upb_val))
+        st.success("##### Congratulation, your ideal weight is beetween {:.2f} and {:.2f} kg".format(18.5*(height/100)**2, 25*(height/100)**2))
 
 def create_line(i, n):
     return n*(i/100)**2
