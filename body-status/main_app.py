@@ -30,7 +30,7 @@ with tab1:
 
 with tab2:
     st.header("BMI and BFP Estimator")
-    sex = st.radio("Are you Male or Female?", ["Male", "Female"])
+    sex = st.radio("Sex?", ["Male", "Female"])
     age = st.slider("Age", 19, 70, 25)
     col1, col2 = st.columns(2)
     weight = col1.number_input("Input your Body Weight (kg):", 0)
