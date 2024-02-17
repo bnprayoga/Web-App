@@ -39,7 +39,7 @@ BFP_table = pd.DataFrame(BFP_dict)
 class Content():
     def intro(self):
         st.header("Problem with Obesity")
-        st.image("body/status/images/obese.jpg", use_column_width = "always")
+        st.image("body-status/images/obese.jpg", use_column_width = "always")
         st.markdown('<div style="text-align: justify;">{}</div>'.format(text_intro), unsafe_allow_html=True)
         st.markdown('---')
 
