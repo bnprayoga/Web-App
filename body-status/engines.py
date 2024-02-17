@@ -49,7 +49,7 @@ def return_user_BMI_class(BMI, calc_status):
         elif BMI >= 35:
             st.subheader("You are considered as Obese type II")
         elif BMI >= 30:
-            st.subheader("You are considered as Obese type II")
+            st.subheader("You are considered as Obese type I")
         elif BMI >= 25:
             st.subheader("You are considered as Overweight")
         elif BMI >= 18.5:
