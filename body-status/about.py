@@ -39,13 +39,13 @@ BFP_table = pd.DataFrame(BFP_dict)
 class Content():
     def intro(self):
         st.header("Problem with Obesity")
-        st.image("images/obese.jpg", use_column_width = "always")
+        st.image("body/status/images/obese.jpg", use_column_width = "always")
         st.markdown('<div style="text-align: justify;">{}</div>'.format(text_intro), unsafe_allow_html=True)
         st.markdown('---')
 
     def about_BMI(self):
         st.header("What is BMI?")
-        st.image("images/BMI.jpg", use_column_width = "always")
+        st.image("body-status/images/BMI.jpg", use_column_width = "always")
         st.markdown('<div style="text-align: justify;">{}</div>'.format(text_about_BMI), unsafe_allow_html=True)
         st.latex(r"""BMI = \frac{weight \left( kg \right)} {height \left( m^2 \right)}""")
         st.markdown('<h5 style="text-align: center;">{}</h5>'.format("BMI Table"), unsafe_allow_html=True)
@@ -54,7 +54,7 @@ class Content():
 
     def about_BFP(self):
         st.header("What is BFP?")
-        st.image("images/fat.png", use_column_width = "always")
+        st.image("body-status/images/fat.png", use_column_width = "always")
         st.markdown('<div style="text-align: justify;">{}</div>'.format(text_about_BFP), unsafe_allow_html=True)
         st.latex(r"""BFP = 1.2*BMI + 0.23*age - 10.8*gender - 5.4""")
         st.markdown("""* **Note** that this method is not really accurate to estimate BFP, but for the simplicity, we will utilizeBMI method as a fancy way to get rough estimate of BFP""")
