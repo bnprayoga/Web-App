@@ -37,7 +37,7 @@ def show_weight_from_ideal(BMI, weight, height):
     elif BMI < 18.5:
         st.success("##### Gain {:.2f} to {:.2f} kg to get Ideal Weight!!!".format(-lwb_val, -upb_val))
     else:
-        st.success("##### Congratulation, your weight is Ideal")
+        st.success("##### Congratulation, your ideal weight is beetween {:.2f} and {:.2f} kg".format(lwb_val, upb_val))
 
 def create_line(i, n):
     return n*(i/100)**2
@@ -45,11 +45,11 @@ def create_line(i, n):
 def return_user_BMI_class(BMI, calc_status):
     if calc_status:
         if BMI >= 40:
-            st.subheader("You are considered as Obese type III, Extemely Obese!")
+            st.subheader("You are considered as Obese Type III, Extemely Obese!")
         elif BMI >= 35:
-            st.subheader("You are considered as Obese type II")
+            st.subheader("You are considered as Obese Type II")
         elif BMI >= 30:
-            st.subheader("You are considered as Obese type I")
+            st.subheader("You are considered as Obese Type I")
         elif BMI >= 25:
             st.subheader("You are considered as Overweight")
         elif BMI >= 18.5:
