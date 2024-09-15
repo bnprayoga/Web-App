@@ -1,1 +1,3 @@
 Body Status Web Application that help others to check their body status based on BMI and BFP calculation. Gives this machine your sex, age, height, and weight information and it will calculates your BMI Classification and Body Fat Percentages Estimation. Feel free to check your body status for free...
+
+Link to the site: https://bmi-bfp-calc-by-bagas.streamlit.app/
