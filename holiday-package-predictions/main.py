@@ -160,13 +160,14 @@ dataset_prediction_page = st.Page("Tools/predict_dataset.py", title="Prediction 
 #dataset_page = st.Page("Dataset/dataset_manager.py", title="Get Dataset")
 models_page = st.Page("Models/models_manager.py", title="Get Trained Models")
 
+st.set_page_config(
+        page_title="Demo App",
+        page_icon="holiday-package-predictions/Pics/favicon.png"
+)
 pg = st.navigation({
     "Home" : [developer_page],
     "Prediction" : [manual_prediction_page, dataset_prediction_page]
 })
-st.set_page_config(
-        page_title="Demo App",
-        page_icon="holiday-package-predictions/Pics/favicon.png"
-    )
+
 st.title("HOLIDAY PACKAGE PREDICTION DEMO APP")
 pg.run()
