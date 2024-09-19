@@ -166,7 +166,7 @@ pg = st.navigation({
 })
 st.set_page_config(
         page_title="Demo App",
-        page_icon="./Pics/favicon.png"
+        page_icon="holiday-package-predictions/Pics/favicon.png"
     )
 st.title("HOLIDAY PACKAGE PREDICTION DEMO APP")
 pg.run()
