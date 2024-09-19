@@ -58,7 +58,7 @@ def check_null(row):
     null_col = list(df_null[df_null>0].index)
     return null_col
 
-final_model_calibrated = joblib.load('holiday-package-predictions/Models/final_model_calibrated.pkl')
+final_model_calibrated = pickle.load('holiday-package-predictions/Models/final_model_calibrated.pkl')
 
 prediction = None
 
