@@ -74,7 +74,7 @@ with input_tab:
         def convert_df(path):
             # IMPORTANT: Cache the conversion to prevent computation on every rerun
             df = pd.read_csv(path)
-            return df.to_csv().encode("utf-8")
+            return df.to_csv(index=False).encode("utf-8")
 
         template = convert_df("holiday-package-predictions/Dataset/templates.csv")
         dummy = convert_df("holiday-package-predictions/Dataset/dummpy_production_df.csv")
