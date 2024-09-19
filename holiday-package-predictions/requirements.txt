@@ -1,0 +1,8 @@
+streamlit=1.38.0
+streamlit-option-menu=0.3.12
+imbalanced-learn=0.12.3
+numpy=1.26.2
+pandas=2.1.4
+matplotlib=3.8.2
+plotly=5.18.0
+scikit-learn=1.4.0
