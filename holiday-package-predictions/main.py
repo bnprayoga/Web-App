@@ -168,7 +168,7 @@ pg = st.navigation({
     "Home" : [developer_page],
     "Prediction" : [manual_prediction_page, dataset_prediction_page]
 })
-st.write(pickle.__version__)
+st.write(numpy.__version__)
 st.write(joblib.__version__)
 st.write(sklearn.__version__)
 st.title("HOLIDAY PACKAGE PREDICTION DEMO APP")
