@@ -16,7 +16,6 @@ from sklearn.preprocessing import PowerTransformer, MinMaxScaler, StandardScaler
 from sklearn.pipeline import Pipeline as OuterPipeline
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
 from streamlit_option_menu import option_menu
-from st_pages import Page, Section, show_pages, add_page_title, hide_pages
 import about
 import plotly.graph_objects as go
 import plotly.express as px
