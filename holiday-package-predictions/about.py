@@ -171,21 +171,21 @@ about_app, about_dataset, about_model, about_team = st.tabs(["About App", "Datas
 
 with about_app:
     st.header("Rakamin Data Science Bootcamp Batch 45 Final Project Apps Demo")
-    st.image("Pics/cover.jpg")
+    st.image("./Pics/cover.jpg")
 
     st.subheader("1. Project Overview")
-    st.image("Pics/1.png")
+    st.image("./Pics/1.png")
     st.write("""
     This project aims to predict the likelihood of a customer purchasing a holiday package using machine learning models. By analyzing various customer data points, including demographics and travel history, the app assists "Trips & Travel.Com" in identifying potential buyers for its holiday packages, which include Basic, Standard, Deluxe, Super Deluxe, and King. The focus is on promoting a new **Wellness Tourism Package** while improving the efficiency of marketing strategies.
     """)
     
     st.subheader("2. Problem Statement")
-    st.image("Pics/2.png")
+    st.image("./Pics/2.png")
     st.write("""
     The company's marketing costs have been high, with only 22% of customers purchasing holiday packages in the last year. One major issue is that marketing campaigns were done randomly, without considering customer profiles. The company now seeks to use data-driven approaches to make their marketing more efficient by targeting the right customers.""")
 
     st.subheader("3. Goals and Objectives")
-    st.image("Pics/3.png")
+    st.image("./Pics/3.png")
     st.write("""
     - **Prediction:** Use customer data (such as income, age, occupation, etc.) to predict if they will purchase a holiday package.
     - **Efficiency:** Reduce marketing costs by focusing on high-potential customers.
@@ -194,19 +194,19 @@ with about_app:
     ratio = [1,2]
     st.subheader("4. Business Metrics")
     col1, col2 = st.columns(ratio)
-    col1.image("Pics/4.png")
+    col1.image("./Pics/4.png")
     col2.write("""
     **Conversion Rate:** The percentage of customers who purchase a package out of the total number of customers contacted. This metric helps to evaluate the effectiveness of sales efforts. A higher conversion rate indicates that a larger proportion of contacted customers are making purchases.
     **After Using Model**: The Conversion Rate of 1000 samples of dummy production dataset shows that the **increase of Conversion Rate from 21.72 Percent up to 94.62 Percent (3,4X Increase in Conversion Rate).**
     """)
     col3, col4 = st.columns(ratio)
-    col3.image("Pics/5.png")
+    col3.image("./Pics/5.png")
     col4.write("""
     **Customer Acquisition Cost (CAC):** The average cost spent to acquire a new customer who purchases a package. CAC measures the efficiency of the marketing and sales processes. Lowering the CAC while maintaining or increasing customer acquisition is a key goal for businesses.
     **After Using Model**: The CAC of 1000 samples of dummy production dataset shows that the **a Reduction of CPC Cost of 38 Percent.**
     """)
     col5, col6 = st.columns(ratio)
-    col5.image("Pics/6.png")
+    col5.image("./Pics/6.png")
     col6.write("""
     **Contact Rate:** The percentage of customers successfully contacted out of the total potential customers. Contact rate is a measure of outreach effectiveness on how well a business is able to engage with its customer base, which impact sales and conversion rates.
     Calibrated model probabilities provide reliable predictions of customer willingness to buy. This helps Marketing and Sales to optimize strategies by segmenting customers and tailoring engagement.
@@ -223,11 +223,11 @@ with about_dataset:
 with about_model:
     st.header("Core Model Used")
     st.subheader("XGBoost (Extreme Gradient Boosting")
-    st.image("Pics/xgb_logo.png", caption="XGBoost Logo")
+    st.image("./Pics/xgb_logo.png", caption="XGBoost Logo")
     show_xgb_model_info()
 
     st.header("Overall Model Architecture")
-    st.image("Pics/model_arch.png", caption="Overall Model Architecture")
+    st.image("./Pics/model_arch.png", caption="Overall Model Architecture")
     show_model_architecture()
 
     st.header("Model Performances")
@@ -236,15 +236,15 @@ with about_model:
     st.subheader("Main Model Performances Comparisons")
     show_model_performances()
     st.subheader("Model Calibration Results")
-    st.image("Pics/calib_results.png", caption="Calibration Results Plot")
+    st.image("./Pics/calib_results.png", caption="Calibration Results Plot")
     
     st.header("Model Learning Results")
     st.subheader("Feature Importances and SHAP Values")
-    st.image("pics/fi_shp (1).png", caption="Feature Importances and SHAP Values")
+    st.image("./Pics/fi_shp (1).png", caption="Feature Importances and SHAP Values")
     st.subheader("Partial Dependences Plot for 5 Best Features")
-    st.image("pics/fi_shp (2).png", caption="Partial Dependences Plot of 5 Best Features")
+    st.image("./Pics/fi_shp (2).png", caption="Partial Dependences Plot of 5 Best Features")
     st.subheader("Partial Dependences Plot for Other Features")
-    st.image("pics/fi_shp (3).png", caption="Partial Dependences Plot of Other Features")
+    st.image("./Pics/fi_shp (3).png", caption="Partial Dependences Plot of Other Features")
 
 with about_team:
     with st.container(border=True):
@@ -252,10 +252,10 @@ with about_team:
         member_card("Pics/pp_round.png", dedi)
     with st.container(border=True):
         st.header("Our Amazing Teams")
-        member_card("Pics/pp_round.png", sulthon)
-        member_card("Pics/pp_round.png", bagas)
-        member_card("Pics/pp_round.png", mia)
-        member_card("Pics/pp_round.png", baiq)
-        member_card("Pics/pp_round.png", ayu)
-        member_card("Pics/pp_round.png", latief)
-        member_card("Pics/pp_round.png", nico)
+        member_card("./Pics/pp_round.png", sulthon)
+        member_card("./Pics/pp_round.png", bagas)
+        member_card("./Pics/pp_round.png", mia)
+        member_card("./Pics/pp_round.png", baiq)
+        member_card("./Pics/pp_round.png", ayu)
+        member_card("./Pics/pp_round.png", latief)
+        member_card("./Pics/pp_round.png", nico)
