@@ -58,7 +58,8 @@ def check_null(row):
     null_col = list(df_null[df_null>0].index)
     return null_col
 
-final_model_calibrated = pickle.load('holiday-package-predictions/Models/final_model_calibrated.pkl')
+with open('holiday-package-predictions/Models/final_model_calibrated.pkl', 'rb') as f:
+    final_model_calibrated = pickle.load(f)
 
 prediction = None
 
