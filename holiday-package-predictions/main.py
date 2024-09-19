@@ -150,6 +150,11 @@ class TranScaler(TransformerMixin):
         
         return pd.DataFrame(self.cl.transform(X_test), columns = columns)
 
+st.set_page_config(
+        page_title="Demo App",
+        page_icon="holiday-package-predictions/Pics/favicon.png"
+)
+
 developer_page = st.Page("about.py", title="Informations")
 
 manual_prediction_page = st.Page("Tools/predict_manual.py", title="Prediction Using Manual Input")
@@ -160,10 +165,6 @@ dataset_prediction_page = st.Page("Tools/predict_dataset.py", title="Prediction 
 #dataset_page = st.Page("Dataset/dataset_manager.py", title="Get Dataset")
 models_page = st.Page("Models/models_manager.py", title="Get Trained Models")
 
-st.set_page_config(
-        page_title="Demo App",
-        page_icon="holiday-package-predictions/Pics/favicon.png"
-)
 pg = st.navigation({
     "Home" : [developer_page],
     "Prediction" : [manual_prediction_page, dataset_prediction_page]
