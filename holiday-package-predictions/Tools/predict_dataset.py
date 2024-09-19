@@ -60,7 +60,7 @@ def plot_donut_chart(y_pred):
     # Show the plot
     st.plotly_chart(fig)
 
-with open('Models/final_model_calibrated.pkl', 'rb') as f:
+with open('holiday-package-predictions/Models/final_model_calibrated.pkl', 'rb') as f:
     final_model_calibrated = pickle.load(f)
 
 input_tab, report_tab = st.tabs(["Input", "Report"])
@@ -76,8 +76,8 @@ with input_tab:
             df = pd.read_csv(path)
             return df.to_csv().encode("utf-8")
 
-        template = convert_df("./Dataset/templates.csv")
-        dummy = convert_df("./Dataset/dummpy_production_df.csv")
+        template = convert_df("holiday-package-predictions/Dataset/templates.csv")
+        dummy = convert_df("holiday-package-predictions/Dataset/dummpy_production_df.csv")
         tempCol, dummyCol = st.columns(2)
         tempCol.download_button(label = "Click To Download Input Template", 
                                 data = template,
