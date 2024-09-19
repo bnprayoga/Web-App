@@ -152,13 +152,13 @@ class TranScaler(TransformerMixin):
 
 developer_page = st.Page("about.py", title="Informations")
 
-manual_prediction_page = st.Page("Tools/predict_manual.py", title="Prediction Using Manual Input")
+manual_prediction_page = st.Page("holiday-package-predictions/Tools/predict_manual.py", title="Prediction Using Manual Input")
 
-dataset_prediction_page = st.Page("Tools/predict_dataset.py", title="Prediction Using File Input")
+dataset_prediction_page = st.Page("holiday-package-predictions/Tools/predict_dataset.py", title="Prediction Using File Input")
 
 #upcoming features
 #dataset_page = st.Page("Dataset/dataset_manager.py", title="Get Dataset")
-models_page = st.Page("Models/models_manager.py", title="Get Trained Models")
+models_page = st.Page("holiday-package-predictions/Models/models_manager.py", title="Get Trained Models")
 
 pg = st.navigation({
     "Home" : [developer_page],
