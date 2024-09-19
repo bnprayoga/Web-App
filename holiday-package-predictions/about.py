@@ -249,7 +249,7 @@ with about_model:
 with about_team:
     with st.container(border=True):
         st.header("Our Beloved Tutor")
-        member_card("Pics/pp_round.png", dedi)
+        member_card("holiday-package-predictions/Pics/pp_round.png", dedi)
     with st.container(border=True):
         st.header("Our Amazing Teams")
         member_card("holiday-package-predictions/Pics/pp_round.png", sulthon)
