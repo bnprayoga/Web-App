@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import joblib
 
 def compile_manual_input():
     with st.container(border=True):
@@ -58,7 +59,7 @@ def check_null(row):
     return null_col
 
 with open('holiday-package-predictions/Models/final_model_calibrated.pkl', 'rb') as f:
-    final_model_calibrated = pickle.load(f)
+    final_model_calibrated = joblib.load(f)
 
 prediction = None
 
