@@ -5,7 +5,7 @@ import pickle
 import plotly.graph_objects as go
 import plotly.express as px
 
-st.page_config(layout = "wide")
+st.set_page_config(layout = "wide")
 
 def file_reader(dataset):
     X = pd.read_csv(dataset)
