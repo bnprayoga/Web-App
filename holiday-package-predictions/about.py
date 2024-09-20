@@ -162,11 +162,11 @@ latief = {
     'Email' : 'latiefalamien24@gmail.com'
 }
 
-#nico = {
-#    'Name' : "Nico Simarmata | Nico",
-#    'Job' : 'Data Science Member',
-#    'Email' : 'nicosimarmata88@gmail.com'
-#}
+nico = {
+    'Name' : "Nico Simarmata | Nico",
+    'Job' : 'Data Science Member',
+    'Email' : 'nicosimarmata88@gmail.com'
+}
 
 about_app, about_dataset, about_model, about_team = st.tabs(["About App", "Dataset Info", "Model Info", "Meet Our Team"])
 
@@ -259,4 +259,4 @@ with about_team:
         member_card("holiday-package-predictions/Pics/pp_round.png", baiq)
         member_card("holiday-package-predictions/Pics/pp_round.png", ayu)
         member_card("holiday-package-predictions/Pics/pp_round.png", latief)
-        member_card("holiday-package-predictions/Pics/pp_round.png", nico)
+        #member_card("holiday-package-predictions/Pics/pp_round.png", nico)
