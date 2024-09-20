@@ -11,14 +11,14 @@ def compile_manual_input():
         Age = st.slider("Age", min_value=18, max_value=100, value=(25))        
 
         colGender, colMaritalStatus  = st.columns([2,4])
-        GenderMale = colGender.radio("Gender", ["Male", "Female"], index=None, horizontal=True)
+        GenderMale = colGender.radio("Gender", ["Male", "Female"], index=1, horizontal=True)
         if GenderMale == "Male": GenderMale = 1
         else: GenderMale = 0
-        MaritalStatus = colMaritalStatus.radio("Marital Status", ["Unmarried", "Married", "Divorced"], index=None, horizontal=True)
+        MaritalStatus = colMaritalStatus.radio("Marital Status", ["Unmarried", "Married", "Divorced"], index=0, horizontal=True)
         
-        CityTier, colPassport = st.columns([5,1])
+        CityTier, colPassport = st.columns([4,1])
         hasPassport = colPassport.checkbox("Has Passport")
-        CityTier = CityTier.selectbox("City Tier", [1, 2, 3], index=None)
+        CityTier = CityTier.selectbox("City Tier", [1, 2, 3], index=1)
 
     with st.container(border=True):
         st.write("### Job Related Informations")
@@ -27,7 +27,7 @@ def compile_manual_input():
         monthlyIncome = colIncome.number_input("Monthly Income (US$)", value=20000)
         Designation = colDesignation.selectbox("Designation", 
                             ["Executive", "Manager", "Senior Manager", "AVP", "VP"])
-        Occupation = st.radio("Occupations", ["Large Business", "Small Business", "Others"], index=None, horizontal=True)
+        Occupation = st.radio("Occupations", ["Large Business", "Small Business", "Others"], index=0, horizontal=True)
 
     with st.container(border=True):
         st.write("### Engagment")
