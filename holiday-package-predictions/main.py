@@ -152,7 +152,8 @@ class TranScaler(TransformerMixin):
 
 st.set_page_config(
         page_title="Demo App",
-        page_icon="holiday-package-predictions/Pics/favicon.png"
+        page_icon="holiday-package-predictions/Pics/favicon.png",
+        layout = "wide"
 )
 
 developer_page = st.Page("about.py", title="Informations")
