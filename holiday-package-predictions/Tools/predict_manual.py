@@ -35,8 +35,8 @@ def compile_manual_input():
         NumberOfFollowups = st.number_input("Number of Followups", min_value=1, max_value=6, value=3)
         PreferredPropertyStar = st.radio("Preferred Property Star", [3, 4, 5], index=1, horizontal=True)
         st.write("Ratings on Pitch")
-        PitchSatisfactionScore = st.radio("Pitch Satisfaction Score", [1,2,3,4,5], index=2, horizontal=True)
-        #PitchSatisfactionScore = st.feedback("stars")
+        #PitchSatisfactionScore = st.radio("Pitch Satisfaction Score", [1,2,3,4,5], index=2, horizontal=True)
+        PitchSatisfactionScore = st.feedback("stars")
 
     row = {
         'Age': [Age],
